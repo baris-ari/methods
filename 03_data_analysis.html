@@ -64,7 +64,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./resources.html" rel="next">
+<link href="./04_pipe.html" rel="next">
 <link href="./02_data_in_R.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -164,6 +164,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./04_pipe.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Functions, Libraries and Operators</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./resources.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Resources</span></a>
   </div>
@@ -187,6 +193,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#histogram" id="toc-histogram" class="nav-link" data-scroll-target="#histogram"><span class="header-section-number">3.5.1</span> Histogram</a></li>
   <li><a href="#box-plots" id="toc-box-plots" class="nav-link" data-scroll-target="#box-plots"><span class="header-section-number">3.5.2</span> Box plots</a></li>
   </ul></li>
+  <li><a href="#dealing-with-missingness" id="toc-dealing-with-missingness" class="nav-link" data-scroll-target="#dealing-with-missingness"><span class="header-section-number">3.6</span> Dealing with missingness</a></li>
+  <li><a href="#using-square-brackets-for-further-investigation" id="toc-using-square-brackets-for-further-investigation" class="nav-link" data-scroll-target="#using-square-brackets-for-further-investigation"><span class="header-section-number">3.7</span> Using square brackets for further investigation</a></li>
   </ul>
 </nav>
     </div>
@@ -212,7 +220,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>If you have followed the instructions in Chapter 2.10, you should have a folder for this module in which one R file named <code>01_R_basics.R</code> and one folder <code>named</code> data are present.</p>
+<p>If you have followed the instructions in Chapter 2.10, you should have a folder for this module in which one R file named <code>01_R_basics.R</code> and one folder named <code>data</code> are present.</p>
 <p>You can open R Studio by launching <code>01_R_basics.R</code>. You should see a screen similar to <a href="#fig-rscreen3" class="quarto-xref">Figure&nbsp;<span>3.1</span></a> R Studio will automatically set working directory to your module folder. This approach allows us to have a tidy filing system. Our data files are in the <code>data</code> folder.</p>
 <div id="fig-rscreen3" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -830,9 +838,205 @@ Figure&nbsp;3.3: Help tab explaining barplot()
 </div>
 </div>
 <p>We drew these lines for demonstration purposes only. It is to learn that a box plot visualizes the information in a five-point summary. Normally, we wouldn’t show them this way because we can assume the reader knows how to read a box plot.</p>
-
-
 </section>
+</section>
+<section id="dealing-with-missingness" class="level2" data-number="3.6">
+<h2 data-number="3.6" class="anchored" data-anchor-id="dealing-with-missingness"><span class="header-section-number">3.6</span> Dealing with missingness</h2>
+<p>Sometimes our variable of interest may have missing values inside. For example, GDP per capita PPP (PPP stands for purchasing power parity) variable is <code>GDP_pc_PPP</code>. GDP data for some countries are missing.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb80"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb80-1"><a href="#cb80-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(df<span class="sc">$</span>GDP_pc_PPP)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>    Min.  1st Qu.   Median     Mean  3rd Qu.     Max.     NA's 
+   646.9   3127.0   9627.9  15494.4  20497.9 122609.4        5 </code></pre>
+</div>
+</div>
+<p>NA’s here means missing. GDP data for five countries are not available. Let’s find these five countries. The function <code>is.na()</code> tells whether something is missing or not.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb82"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb82-1"><a href="#cb82-1" aria-hidden="true" tabindex="-1"></a><span class="co"># is there any missing values in GDP_pc_PPP?</span></span>
+<span id="cb82-2"><a href="#cb82-2" aria-hidden="true" tabindex="-1"></a><span class="fu">is.na</span>(df<span class="sc">$</span>GDP_pc_PPP)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  [1] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE
+ [13] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE
+ [25] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE  TRUE FALSE FALSE
+ [37] FALSE  TRUE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE
+ [49] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE
+ [61] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE
+ [73] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE
+ [85] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE
+ [97] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE
+[109] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE
+[121]  TRUE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE
+[133] FALSE FALSE  TRUE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE  TRUE
+[145] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE
+[157] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE</code></pre>
+</div>
+</div>
+<p>What are the names of the countries with missing <code>GDP_pc_PPP</code>? We want to tell R the following sentence: bring ‘Country Name’ such that ‘GDP_pc_PPP’ is missing. We will use square brackets notation, <code>[]</code>, to create this sentence.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb84"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb84-1"><a href="#cb84-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Bring the values of df$Country_Name for those where df$GDP_pc_PPP is not available&nbsp;</span></span>
+<span id="cb84-2"><a href="#cb84-2" aria-hidden="true" tabindex="-1"></a>df<span class="sc">$</span>Country_Name[<span class="fu">is.na</span>(df<span class="sc">$</span>GDP_pc_PPP) <span class="sc">==</span> <span class="cn">TRUE</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Cuba"       "Djibouti"   "Korea, Dem" "Somalia"    "Syrian Ara"</code></pre>
+</div>
+</div>
+<p>Dealing with missingness appropriately is important because it might create problems. For example, regular functions <code>mean()</code> and <code>max()</code> will get confused if we do not deal with missingness explicitly.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb86"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb86-1"><a href="#cb86-1" aria-hidden="true" tabindex="-1"></a><span class="co"># mean of GDP_pc_PPP</span></span>
+<span id="cb86-2"><a href="#cb86-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(df<span class="sc">$</span>GDP_pc_PPP)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] NA</code></pre>
+</div>
+</div>
+<p>R tells me it is missing because you cannot make a calculation with a missing value. We need to tell R to remove the missing value</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb88"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb88-1"><a href="#cb88-1" aria-hidden="true" tabindex="-1"></a><span class="co"># mean of GDP_pc_PPP (remove missing values)</span></span>
+<span id="cb88-2"><a href="#cb88-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(df<span class="sc">$</span>GDP_pc_PPP, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 15494.4</code></pre>
+</div>
+</div>
+<p>This is also the case for other functions such as <code>min()</code> and <code>max()</code>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb90"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb90-1"><a href="#cb90-1" aria-hidden="true" tabindex="-1"></a><span class="co">#&nbsp;max without na.rm</span></span>
+<span id="cb90-2"><a href="#cb90-2" aria-hidden="true" tabindex="-1"></a><span class="fu">max</span>(df<span class="sc">$</span>GDP_pc_PPP)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] NA</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb92"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb92-1"><a href="#cb92-1" aria-hidden="true" tabindex="-1"></a><span class="co">#&nbsp;max with na.rm</span></span>
+<span id="cb92-2"><a href="#cb92-2" aria-hidden="true" tabindex="-1"></a><span class="fu">max</span>(df<span class="sc">$</span>GDP_pc_PPP, <span class="at">na.rm =</span> T)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 122609.4</code></pre>
+</div>
+</div>
+<p>Instead of <code>TRUE</code> or <code>FALSE</code> you ca write <code>T</code> and <code>F</code> as a shortcut. These are reserved characters in R, standing for <code>TRUE</code> and <code>FALSE</code>, respectively.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb94"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb94-1"><a href="#cb94-1" aria-hidden="true" tabindex="-1"></a><span class="fu">min</span>(df<span class="sc">$</span>GDP_pc_PPP, <span class="at">na.rm =</span> T)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 646.86</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb96"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb96-1"><a href="#cb96-1" aria-hidden="true" tabindex="-1"></a><span class="fu">max</span>(df<span class="sc">$</span>GDP_pc_PPP, <span class="at">na.rm =</span> T)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 122609.4</code></pre>
+</div>
+</div>
+<p>Graphical functions will handle missingness automatically.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb98"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb98-1"><a href="#cb98-1" aria-hidden="true" tabindex="-1"></a><span class="co"># histogram</span></span>
+<span id="cb98-2"><a href="#cb98-2" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(df<span class="sc">$</span>GDP_pc_PPP)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="03_data_analysis_files/figure-html/unnamed-chunk-42-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb99"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb99-1"><a href="#cb99-1" aria-hidden="true" tabindex="-1"></a><span class="co"># boxplot</span></span>
+<span id="cb99-2"><a href="#cb99-2" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(df<span class="sc">$</span>GDP_pc_PPP)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="03_data_analysis_files/figure-html/unnamed-chunk-43-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="using-square-brackets-for-further-investigation" class="level2" data-number="3.7">
+<h2 data-number="3.7" class="anchored" data-anchor-id="using-square-brackets-for-further-investigation"><span class="header-section-number">3.7</span> Using square brackets for further investigation</h2>
+<p>This final box plot above (for GDP per capita) shows six points above the vertical line denoting the maximum. What are those?</p>
+<p>They are called <strong>outliers</strong>. These countries have a very high GDP per capita. These values are quite different than the rest, as they are much higher. Such values are called outliers.</p>
+<p>Let’s find which countries have these extremely high values. Recall that we can use square brackets notation, <code>[]</code>, to tell R which values to bring. The pseudocode is the following:</p>
+<p><code>df$Country_Name[ 'ROW NUMBER OF THE HIGHEST GDP PER CAPITA']</code></p>
+<p>To write this, I need the know the row number of the observation with the highest GDP per capita.</p>
+<p>I am going to sort my data frame by using <code>order()</code>, which will give me the row number based on ordering of a variable.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb100"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb100-1"><a href="#cb100-1" aria-hidden="true" tabindex="-1"></a><span class="co"># row numbers by highest GDP_pc_PPP</span></span>
+<span id="cb100-2"><a href="#cb100-2" aria-hidden="true" tabindex="-1"></a><span class="fu">order</span>(df<span class="sc">$</span>GDP_pc_PPP, <span class="at">decreasing =</span> T)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  [1] 124  82 131 111  24 158 110 128 114  68  39   7 141  10  23   6  37  48
+ [19]  71  50  52  73  76  35  58  45 113 151  81  86  72  59 140  36 122 139
+ [37]  46  65 120 105 126  89 143  77  63   4  25  69  90 153 125 157 160  84
+ [55]  19  16   8 103 116  51  14  95  18 138  99 147  21  33  41  70 136  94
+ [73] 164  96  40  31 152 117 149  43   3 123  26  15  75  42 150  87 106  66
+ [91]  74 162 156 100  49 142  53  60   5  91  20   2 134  61 118  17  30 108
+[109] 163  67 115 159  83 109  62  92  98 129 102 165 119  54 161  28  79 130
+[127]  27 137  80  78  13  32  88 148 154 112 145  97 132  11 166   1  56  55
+[145] 155  64  12  44  57  93 127 146 133  85  47 104 101  22 107   9  29  34
+[163]  38 121 135 144</code></pre>
+</div>
+</div>
+<p>Let’s store these row numbers in an object. This way we don’t need to write this long statement again and again.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb102"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb102-1"><a href="#cb102-1" aria-hidden="true" tabindex="-1"></a><span class="co"># row numbers by highest GDP_pc_PPP stored in row_nos</span></span>
+<span id="cb102-2"><a href="#cb102-2" aria-hidden="true" tabindex="-1"></a>row_nos <span class="ot">&lt;-</span> <span class="fu">order</span>(df<span class="sc">$</span>GDP_pc_PPP, <span class="at">decreasing =</span> T)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><code>row_nos</code> are the row numbers of when the data is ordered from the highest GDP per capita to the lowest.</p>
+<p>First item in <code>row_nos</code> is the row number of the observation with the highest <code>GDP_pc_PPP</code>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb103"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb103-1"><a href="#cb103-1" aria-hidden="true" tabindex="-1"></a><span class="co"># row no of the observation with the highest GDP per capita</span></span>
+<span id="cb103-2"><a href="#cb103-2" aria-hidden="true" tabindex="-1"></a>row_nos[<span class="dv">1</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 124</code></pre>
+</div>
+</div>
+<p>Let’s get the name of the country! Recall that I can use the square brackets notation.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb105"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb105-1"><a href="#cb105-1" aria-hidden="true" tabindex="-1"></a><span class="co">#&nbsp;name of the country with the highest GDP per capita</span></span>
+<span id="cb105-2"><a href="#cb105-2" aria-hidden="true" tabindex="-1"></a>df<span class="sc">$</span>Country_Name[ row_nos[<span class="dv">1</span>] ]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Qatar"</code></pre>
+</div>
+</div>
+<p>Qatar has the highest GDP per capita in 2010. But I am interested in the highest 6 countries.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb107"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb107-1"><a href="#cb107-1" aria-hidden="true" tabindex="-1"></a><span class="co"># recall that to get the first six rows, you could write this:</span></span>
+<span id="cb107-2"><a href="#cb107-2" aria-hidden="true" tabindex="-1"></a>row_nos[<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 124  82 131 111  24 158</code></pre>
+</div>
+</div>
+<p>But writing <code>c(1,2,3,4,5,6)</code> is cumbersome. A better approach is using <code>seq()</code> function.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb109"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb109-1"><a href="#cb109-1" aria-hidden="true" tabindex="-1"></a><span class="co">#&nbsp;sequence from 1 to 6</span></span>
+<span id="cb109-2"><a href="#cb109-2" aria-hidden="true" tabindex="-1"></a><span class="fu">seq</span>(<span class="dv">1</span>, <span class="dv">6</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1 2 3 4 5 6</code></pre>
+</div>
+</div>
+<p>R has a shortcut for creating a sequence.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb111"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb111-1"><a href="#cb111-1" aria-hidden="true" tabindex="-1"></a><span class="co">#&nbsp;sequence from 1 to 6: shortest version</span></span>
+<span id="cb111-2"><a href="#cb111-2" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span><span class="sc">:</span><span class="dv">6</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1 2 3 4 5 6</code></pre>
+</div>
+</div>
+<p>So, <code>seq(1,6)</code> and <code>1:6</code> means exactly the same thing in R.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb113"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb113-1"><a href="#cb113-1" aria-hidden="true" tabindex="-1"></a><span class="co"># are the items in 1:6 equal to the items in seq(1,6)</span></span>
+<span id="cb113-2"><a href="#cb113-2" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span><span class="sc">:</span><span class="dv">6</span> <span class="sc">==</span> <span class="fu">seq</span>(<span class="dv">1</span>,<span class="dv">6</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] TRUE TRUE TRUE TRUE TRUE TRUE</code></pre>
+</div>
+</div>
+<p>Now, we can write the phrase for getting the row numbers simpler. We will also need to plug it into <code>df$Country_Name</code> using square brackets.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb115"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb115-1"><a href="#cb115-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Go to df$Country_Name and bring me these observations</span></span>
+<span id="cb115-2"><a href="#cb115-2" aria-hidden="true" tabindex="-1"></a><span class="co"># 'these' refers to row_nos[1:6]</span></span>
+<span id="cb115-3"><a href="#cb115-3" aria-hidden="true" tabindex="-1"></a>df<span class="sc">$</span>Country_Name[ row_nos[<span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>] ]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Qatar"      "Kuwait"     "Singapore"  "Norway"     "Switzerlan"
+[6] "United Sta"</code></pre>
+</div>
+</div>
+
+
 </section>
 
 </main> <!-- /main -->
@@ -1263,8 +1467,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./resources.html" class="pagination-link" aria-label="Resources">
-        <span class="nav-page-text">Resources</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./04_pipe.html" class="pagination-link" aria-label="Functions, Libraries and Operators">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Functions, Libraries and Operators</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
