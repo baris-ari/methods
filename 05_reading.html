@@ -1,0 +1,1239 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>5&nbsp; How to read a research article – Social Science Research Methods</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./06_crosstab.html" rel="next">
+<link href="./04_pipe.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script src="site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./05_reading.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">How to read a research article</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Social Science Research Methods</a> 
+    </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Welcome to Lab Website</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./01_rbasics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">R Basics</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./02_data_in_R.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Data in R</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03_data_analysis.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Basic Data Analysis</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04_pipe.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Functions, Libraries and Operators</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./05_reading.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">How to read a research article</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./06_crosstab.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Cross Tabulation</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./07_correlation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Correlation</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./08_regression.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Regression</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./09_regression_ii.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">More Regression!</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./resources.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Resources</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#demonstration-wiedemann-2024" id="toc-demonstration-wiedemann-2024" class="nav-link active" data-scroll-target="#demonstration-wiedemann-2024">Demonstration: Wiedemann 2024</a>
+  <ul class="collapse">
+  <li><a href="#abstract" id="toc-abstract" class="nav-link" data-scroll-target="#abstract"><span class="header-section-number">5.1</span> Abstract</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction"><span class="header-section-number">5.2</span> Introduction</a></li>
+  <li><a href="#literature-review-and-theory" id="toc-literature-review-and-theory" class="nav-link" data-scroll-target="#literature-review-and-theory"><span class="header-section-number">5.3</span> Literature Review and Theory</a></li>
+  <li><a href="#fiscal-austerity-and-indebtedness-in-the-united-kingdom" id="toc-fiscal-austerity-and-indebtedness-in-the-united-kingdom" class="nav-link" data-scroll-target="#fiscal-austerity-and-indebtedness-in-the-united-kingdom"><span class="header-section-number">5.4</span> Fiscal Austerity and Indebtedness in the United Kingdom</a></li>
+  <li><a href="#analysis" id="toc-analysis" class="nav-link" data-scroll-target="#analysis"><span class="header-section-number">5.5</span> Analysis</a>
+  <ul class="collapse">
+  <li><a href="#electoral-consequences-of-indebtedness-under-fiscal-austerity" id="toc-electoral-consequences-of-indebtedness-under-fiscal-austerity" class="nav-link" data-scroll-target="#electoral-consequences-of-indebtedness-under-fiscal-austerity">Electoral Consequences of Indebtedness under Fiscal Austerity</a></li>
+  <li><a href="#investigating-the-mechanisms" id="toc-investigating-the-mechanisms" class="nav-link" data-scroll-target="#investigating-the-mechanisms">Investigating the Mechanisms</a></li>
+  </ul></li>
+  <li><a href="#discussion-and-conclusion" id="toc-discussion-and-conclusion" class="nav-link" data-scroll-target="#discussion-and-conclusion"><span class="header-section-number">5.6</span> Discussion and Conclusion</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">How to read a research article</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>How do you read a research article published in a Political Science journal? This can be a daunting task as modern Political Science is often technical and the text can be dense, full of unfamiliar terms and references.</p>
+<p>In this exercise, we will look into recent articles published in leading academic journals. Our focus will be on articles that tackle <em>empirical questions</em>. Recall that the tools we are learning in this module are suitable for empirical research questions. Studies that are purely theoretical in their approach and/or that tackle normative questions (e.g., political philosophy or ethics) are beyond our scope.</p>
+<p>This does not mean that empirical research is not based on <em>theory</em>. You need a preliminary <em>explanation</em> to tackle an empirical question. This particular <em>explanation</em> comes from your <em>theoretical framework</em>. Theory always has a purpose and our purpose in empirical research is to provide a cogent explanation to the question we are studying. In other words, theory is always there and we need to lay it out as clearly as possible.</p>
+<p>Most research articles come in this organizational format:</p>
+<ol type="1">
+<li>Title and abstract</li>
+<li>Introduction</li>
+<li>Literature review</li>
+<li>Theory</li>
+<li>Research Design</li>
+<li>Empirical Analysis</li>
+<li>Conclusions</li>
+</ol>
+<p>Some articles can be slightly different. For example, the literature review and theory can be blended together under one (or multiple) sections. Some articles may have additional sections for describing their cases or for additional empirical tests or discussions. Nonetheless, the general shape we outlined above is virtually universal for all empirical research articles.</p>
+<section id="demonstration-wiedemann-2024" class="level1 unnumbered">
+<h1 class="unnumbered">Demonstration: Wiedemann 2024</h1>
+<p>We look into <em>the Electoral Consequences of Household Indebtedness under Austerity</em> by Andreas Wiedemann. You can download the article here: <a href="https://doi.org/10.1111/ajps.12708" class="uri">https://doi.org/10.1111/ajps.12708</a>. It should be open access, but in case it is not, you can gain access through your institution by using your University credentials.</p>
+<div style="text-align:center; border: 2px solid black;">
+<div id="fig-ss01" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-ss01-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/05/ss_article.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ss01-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5.1: A screenshot of the article we are reading
+</figcaption>
+</figure>
+</div>
+</div>
+<p>We will go over the article in detail, starting with the abstract.</p>
+<section id="abstract" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="abstract"><span class="header-section-number">5.1</span> Abstract</h2>
+<p>The article starts with a general question:</p>
+<blockquote class="blockquote">
+<p>What are the political consequences of rising household debt in the context of fiscal austerity?</p>
+</blockquote>
+<p>This is a clearly formulated question. From this question, we can guess the main explanatory variable, the <em>rising household debt</em>. After reading the first sentence, I have a very good idea that this article will study the impact of the <em>rising household debt</em>.</p>
+<p>The impact on what, though? As I mentioned, this opening question is general, so the outcome variable is still a little vague. The article will look into the <em>political consequences</em>, but this can be anything. We need to be patient and read more.</p>
+<p>Let’s look at the next two sentences:</p>
+<blockquote class="blockquote">
+<p>I argue that cuts in welfare benefits privatize social obligations as voters address ensuing financial shortfalls by borrowing money. Debt recommodifies individuals and shifts their electoral support from incumbents to opposition and anti-establishment parties by provoking feelings of political neglect, economic vulnerability, and strong emotional responses.</p>
+</blockquote>
+<p>The theoretical argument is fully laid down here. It is a dense statement, but the theoretical mechanisms are formulated clearly. Let’s try to sketch the theoretical framework using a flowchart (see <a href="#fig-theory1" class="quarto-xref">Figure&nbsp;<span>5.2</span></a>).</p>
+<div style="text-align:center;">
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div id="fig-theory1" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-theory1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div>
+<pre class="mermaid mermaid-js" data-label="fig-theory1">flowchart TD
+    A[Welfare cuts] --&gt; |Borrowing money\nto address financial\nshortfalls| C[Indebtedness]
+    C --&gt; |Recommodification\nof the individual| D[Emotional response:\nFeelings of\npolitical neglect and\neconomic vulnerability]
+    D --&gt; |Change in\npolitical behaviour| E[Shifts in electoral support\nfrom incumbents to opposition\nand anti-establishment parties]
+</pre>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-theory1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5.2: Theoretical framework formulated in the article
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<p>This is the theoretical framework of the article! We also have a very good idea of the outcome variable now: vote choice. Or, more precisely, the vote share of the incumbent, opposition and anti-establishment parties.</p>
+<p>The article expects to find a relationship between indebtedness and support for opposition/anti-establishment parties.</p>
+<p>Let’s continue:</p>
+<blockquote class="blockquote">
+<p>I examine this argument by leveraging spatial and temporal variation in the rollout of Universal Credit (UC), a large-scale welfare reform in the United Kingdom. Using fine-grained administrative data on unsecured debt, I demonstrate that fiscal austerity generated an increase in indebtedness, which lowered support for the incumbent Conservatives and strengthened support for Labour and the UK Independence Party (UKIP).</p>
+</blockquote>
+<p>Here, the article is summarizing the empirical analysis. It tests its arguments using data from the UK. We now have a good idea on the empirical analysis and measurement.</p>
+<p>Let’s unpack. Consider the theoretical concepts, and corresponding measurement. How does the article measure these concepts?</p>
+<p><strong>Concept: measurement</strong></p>
+<ol type="1">
+<li><p>Cuts in welfare benefits: variation in the rollout of Universal Credit (UC)</p></li>
+<li><p>Increasing debt recommodifies individuals: fine-grained administrative data on unsecured debt (increase in indebtedness)</p></li>
+<li><p>feelings of political neglect, etc.: ? [still unclear]</p></li>
+<li><p>shifts in electoral support from the incumbent to opposition and anti-establishment parties: support for the incumbent Conservatives and support for Labour and the UK Independence Party (UKIP).</p></li>
+</ol>
+<p>We have moved from abstract concepts to tangible measurement. Yet, #3 is still undefined. Let’s continue.</p>
+<blockquote class="blockquote">
+<p>I then use individual-level survey data to explore the mechanisms that link debt and political behavior. The results suggest that rising indebtedness increases the political costs of welfare retrenchment and creates new political cleavages.</p>
+</blockquote>
+<p>Ok, now the article tells me that there is a second study. This is a survey and it is at the individual-level. Is it possible that this is how it is going to capture the feelings of individuals? Based on the theoretical framework, <em>the mechanisms that link debt and political behavior</em> must refer to <em>feelings of political neglect</em>.</p>
+<p>If we re-read the previous sentences, we can also capture that there are at least two main studies, one is at the administrative level, and the other one is at the individual-level.</p>
+<p>By just reading the abstract, we have learned a lot about this article! Some parts are still unclear, but we have a very good idea of what to expect.</p>
+<p>We can also understand that this is an observational study. The empirical analysis is based on observational data. There is no mention of an experiment.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip: Skim the article first
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Before reading any further, I would quickly skim the whole article. Focus on the section titles, organization, figures and tables.</p>
+</div>
+</div>
+</section>
+<section id="introduction" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="introduction"><span class="header-section-number">5.2</span> Introduction</h2>
+<p>The first three paragraphs quickly get us into the heart of the question: the political consequences of austerity. These paragraphs also engage with the literature and present a research gap.</p>
+<p>In the fourth paragraph, the article introduces its contribution.</p>
+<blockquote class="blockquote">
+<p>This article brings a different perspective to this literature by focusing on individuals’ responses to cuts in public spending as a key factor that shapes political behavior.</p>
+</blockquote>
+<p>The focus is on the underlying mechanisms that link austerity/welfare cuts and political behaviour:</p>
+<blockquote class="blockquote">
+<p>Despite the potential gravity of rising household debt, we have little systematic knowledge of the political consequences of borrowing money to fill financial gaps and the underlying mechanisms of these effects.</p>
+</blockquote>
+<p>Afterwards, this paragraph presents a concise summary of the theoretical framework.</p>
+<blockquote class="blockquote">
+<p>I argue that … [THEORETICAL FRAMEWORK SUMMARIZED]</p>
+</blockquote>
+<p>In the fifth paragraph, starting with “I examine my argument …”, the article turns to testing the implications of the theoretical argument empirically. A brief summary of the case the article is going to analyze is presented: the UK, introduction of the Universal Credit, and increase in the household debt.</p>
+<p>Linking the cuts in welfare (i.e., the rollout of the Universal Credit) and the increase in household debt is an important component of the article. This is a key causal chain of the theory:</p>
+<div style="text-align:center;">
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[Welfare cuts] --&gt; B(Borrowing money\nto address financial\nshortfalls) --&gt; C[Indebtedness]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</div>
+<p>The article tries to establish this link empirically:</p>
+<blockquote class="blockquote">
+<p>As I will document, households respond to cuts in social benefits by borrowing money to address financial shortfalls and pay for essential goods and services.</p>
+</blockquote>
+<p>Next two paragraphs unpack the empirical strategy. Starting with:</p>
+<blockquote class="blockquote">
+<p>I provide three types of empirical evidence to support the links between social spending cuts, indebtedness, and electoral behavior.</p>
+</blockquote>
+<p>This is a nice placeholder. The reader now knows what to expect. There are three steps in the causal chain. I expect at least three pieces of analysis to test each mechanism.</p>
+<blockquote class="blockquote">
+<p>First, I leverage spatial and temporal variation in the rollout of UC, combined with novel administrative data on personal unsecured loans at the postcode sector level, to estimate the effect of welfare retrenchment on household indebtedness.</p>
+</blockquote>
+<p>This sentence summarizes the first study analyzing the relationship between austerity and household indebtedness. It also tells that this part is at the postcode sector level. It is akin to a study at the neighbourhood level. There is some aggregation. I expect that you cannot access individual-level data on debt (because of privacy reasons), but data is available on an aggregated level.</p>
+<p>Looking into variations in <span class="math inline">\(X\)</span> plays a key role in analyzing changes in <span class="math inline">\(Y\)</span>. In this respect, the article looks at the different pace with which Universal Credit was introduced in different localities. This is the variation in <span class="math inline">\(X\)</span> (for the first study). The article also looks at the variation in <span class="math inline">\(Y\)</span> (for the first study), referring to different levels of indebtedness in a locality. Is there a relationship between shifts to the less generous Universal Credit scheme and indebtedness?</p>
+<div style="text-align:center;">
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+  A[Shift to Universal Credit] --&gt; B[Indebtedness]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</div>
+<p>The following sentences in this paragraph are a little bit too detailed for our purposes. Let’s say that we didn’t understand them, but we don’t need to get stuck on this because we acquired the main message of the article here:</p>
+<blockquote class="blockquote">
+<p>I show that one additional UC benefit recipient in a postcode sector increases unsecured debt by an average of £665.</p>
+</blockquote>
+<p>This sentence conveys the message that the article empirically links welfare cuts and the level of indebtedness.</p>
+<p>Let’s continue with the next paragraph.</p>
+<blockquote class="blockquote">
+<p>Second, I study how indebtedness affects constituency-level electoral behavior in the 2015, 2017, and 2019 UK general elections.</p>
+</blockquote>
+<p>Now, we are in the second mechanism in the causal chain.</p>
+<blockquote class="blockquote">
+<p>Austerity-induced indebtedness, measured by the variation in unsecured debt induced by UC rollout, increases political participation, lowers vote shares for the incumbent Tories and the Liberal Democrats, and strengthens support for the opposition Labour party and UKIP.</p>
+</blockquote>
+<p>As we emphasized, looking into variations in <span class="math inline">\(X\)</span> plays a key role in analyzing changes in <span class="math inline">\(Y\)</span>. In this respect, the article studies whether there is a relationship between indebtedness and vote share. Note that this is the second study, where the explanatory variable is indebtedness and the outcome variable is the vote share of the incumbent.</p>
+<div style="text-align:center;">
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+  A[Indebtedness] --&gt; B[Vote Share]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</div>
+<p>Following sentence:</p>
+<blockquote class="blockquote">
+<p>I substantiate these results with individual-level data from the British Election Study (BES).</p>
+</blockquote>
+<p>This is an unexpected addition: there is a second study to strengthen the second mechanism. This can be thought of as ‘study 2(b)’. It is at the individual-level, meaning that it is based on responses of individuals to the BES survey. Do we see a link between indebtedness and vote-choice in the BES data? The article looks into this and reports that it establishes a relationship:</p>
+<blockquote class="blockquote">
+<p>Respondents who report that they have taken out loans to pay for essential goods and services– which indicates borrowing during times of financial distress – are more likely to turn out to vote and punish the Tories and cast their ballots at higher rates for Labour and UKIP.</p>
+</blockquote>
+<p>The first paragraph of page 356 discusses the third piece of empirical evidence:</p>
+<blockquote class="blockquote">
+<p>Finally, I examine several mechanisms that help explain how rising indebtedness caused by fiscal austerity measures affects political behavior. Using survey data from the BES, I show that debtors – particularly those who borrow money for essential goods and services – are more worried about their economic security, demand a stronger social safety net, and feel unequally treated and politically neglected. Debtors feel particularly angry and resentful toward the Conservative party and more hopeful toward Labour.</p>
+</blockquote>
+<p>This final set of empirical evidence is about establishing a link between indebtedness and emotional response. Recall that this is a crucial step in the causal chain:</p>
+<div style="text-align:center;">
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+  A[Indebtedness] --&gt; B[Emotional Response]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</div>
+<p>In the final paragraph of the introduction, the article highlights its contributions and summarizes its findings and conclusions. Let’s look at the final sentence:</p>
+<blockquote class="blockquote">
+<p>The article’s findings suggest that voters are not necessarily loyal partisans but respond to policy changes and form electoral choices based on their personal interests. Debt is an increasingly salient factor that influences political behavior.</p>
+</blockquote>
+<p>Let’s end with three important warnings!</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+1. Introduction is probably the most important part
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>All you need to learn about this article is concisely presented in the introduction.</p>
+<p>This is not fictional writing: there are no plot twists and no hidden secrets saved for later.</p>
+<p>All the main parts are laid out here. Introduction is a mini version of the whole article!</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+2. Pay attention to citations
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Look at how the article engages with the literature and how it cites sources. Check the bibliography.</p>
+<p>I encourage using this style for citations and the bibliography. They are called in-text citations. It is a brief way to cite, without wasting too much of word-count. The format is clear: (Author, Year).</p>
+<p>There are no long ‘filler’ sentences masked as citations. Sometimes students write long filler sentences that are clearly aimed at reaching a target word count. A hypothetical example:</p>
+<blockquote class="blockquote">
+<p>Charles Robert Darwin, who was an influential naturalist and biologist, published a seminal book through the John Murray publishing house on 25 November 1859, titled ‘On the Origin of Species by Means of Natural Selection, or the Preservation of Favoured Races in the Struggle for Life’, which introduced the theory of evolution to a larger audience.</p>
+</blockquote>
+<p>You will lose points if you write like this. Instead, convey your message clearly:</p>
+<blockquote class="blockquote">
+<p>Darwin (1859) introduced the theory of evolution.</p>
+</blockquote>
+<p>You can use this article as a guideline for citation rules.</p>
+<p>Also, look at the end of the first paragraph (on the first page). Newspaper sources are cited via a footnote. This is because newspapers are different from scholarly sources. Using (Author, Year) would be awkward, so the article switches to footnote for citing these newspaper sources. This is perfectly fine for popular/non-academic sources (newspaper, website, twitter/social media, etc.) and makes the text more accessible.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+3. Style and organization are important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Pay close attention to the writing style. This style is common in academic and professional writing.</p>
+<p>The text is well-written and well-organized. It is easy to understand and navigate. There are no extremely long or convoluted sentences. The text is organized under sections and subheadings. A well-organized text helps the author guide the reader toward the core points and convey the message as intended.</p>
+<p>The writing style is formal but accessible. The tone is professional, but the author does not shy away from using ‘I’. First-person writing is fine. Let’s see a sentence from the article:</p>
+<blockquote class="blockquote">
+<p>I argue that cuts in welfare benefits privatize social obligations as voters address ensuing financial shortfalls by borrowing money.</p>
+</blockquote>
+<p>This sentence clearly conveys the message of the article. It is excellent.</p>
+<p>This is first-person writing, but not personal writing. What do I mean by personal writing? Let’s see an example:</p>
+<blockquote class="blockquote">
+<p>I have always been interested in welfare cuts and their impact on political behaviour as I lived through the austerity measures.</p>
+</blockquote>
+<p>This sentence does not tell me much. It just insinuates a personal connection without any substance.</p>
+<p>Personal writing is fine in many contexts, including some professional contexts such as a cover letter, but it might not be the best approach in an empirical research paper (unless you are using the method on purpose, as in some qualitative methods).</p>
+</div>
+</div>
+</section>
+<section id="literature-review-and-theory" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="literature-review-and-theory"><span class="header-section-number">5.3</span> Literature Review and Theory</h2>
+<p>This article does not have a designated ‘literature review’ section, but it does melt its review of the literature into multiple sections, most notably the second section.</p>
+<p>The second section, <em>Privatizing Social Obligations: The Electoral Consequences of Indebtedness</em>, both reviews the literature and fully presents the theoretical framework. We already had a very good idea of the theory, but the details are further explained here.</p>
+<p>The opening sentence is a general question. Recall the lecture where we discussed research questions. I emphasized that we usually start with a general, larger question and slowly narrow it down to a more specific question. A similar approach is adopted here to introduce the main question:</p>
+<blockquote class="blockquote">
+<p>Why people turn out to vote and why they decide to punish or reward incumbents at the ballot box are important questions for effective governance and democratic accountability.</p>
+</blockquote>
+<p>A concise but informative review of the literature follows this sentence. In the next paragraph, the article turns to its proposed explanation. It highlights the differences in its approach:</p>
+<blockquote class="blockquote">
+<p>This article offers a different perspective on these questions to cuts in public spending as a critical factor that shapes political behavior more generally. Prior work largely overlooks citizens’ <em>responses</em> to cuts in public spending as a critical factor that shapes political behavior more generally.</p>
+</blockquote>
+<p>Starting with the next paragraph, the article presents its theoretical framework: “I argue that the rise …”. In this paragraph, I would like to highlight one sentence that captures the core of the argument:</p>
+<blockquote class="blockquote">
+<p>This individualization and privatization of social obligations turns some voters into debtors and undermines electoral support for incumbents while strengthening voting for opposition parties, including the far-right.</p>
+</blockquote>
+<p>Pay attention to such key sentences. They tend to come in the first two sentences of a paragraph.</p>
+<p>The next paragraph (the first one on page 357) tells that this <em>privatization of social obligations</em> “has several reinforcing political consequences.”” <em>Several</em> is an important word here, because it signals that an enumeration of causal mechanisms will follow. Indeed, the next sentence starts with “First”. Such sentences are important markers:</p>
+<blockquote class="blockquote">
+<p>First, it changes people’s perception of the role of government and fuels their sense of political neglect and unequal treatment as they go into debt.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Second, debt makes salient the inadequacy of the welfare state and declining social support.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Finally, by increasing feelings of political neglect, status threat, and economic insecurity, the privatization of social obligations triggers emotional responses among people who go into debt to make ends meet. Anger is a particularly powerful emotion.</p>
+</blockquote>
+<p>The theoretical framework is fully laid out. The article now turns back to engaging with previous research because its main argument runs contrary to some established findings in the literature. The paper clearly acknowledges this and tackles it head-on, starting with:</p>
+<blockquote class="blockquote">
+<p>Research has shown that individuals who experienced adverse life events and economic crises are less likely to vote (Bartels 2013; Ojeda, Michener, and Haselswerdt 2020). I argue, however, that borrowing money can increase political participation in two ways.</p>
+</blockquote>
+<p>Although there is no designated section for a literature review, it is baked into the article, mostly apparent in the introduction and the theory.</p>
+<p>The next section takes us to research design and analysis.</p>
+</section>
+<section id="fiscal-austerity-and-indebtedness-in-the-united-kingdom" class="level2" data-number="5.4">
+<h2 data-number="5.4" class="anchored" data-anchor-id="fiscal-austerity-and-indebtedness-in-the-united-kingdom"><span class="header-section-number">5.4</span> Fiscal Austerity and Indebtedness in the United Kingdom</h2>
+<p>This part explains the case under analysis: the United Kingdom. A short and precise summary is provided. Next, the text focuses on how the Universal Credit was introduced, which created variations across different localities.</p>
+<blockquote class="blockquote">
+<p>The government introduced UC gradually over several years across different jobcentres in Great Britain.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Because rollout occurred on a jobcentre-by-jobcentre basis, progress varies considerably between postcode areas (Kennedy and Keen 2018). The variation in the rollout of UC over time and across areas offers a unique opportunity to study the consequences of fiscal austerity on indebtedness and, in turn, electoral behavior.</p>
+</blockquote>
+<p>Under the section “Data and Measurement”, the paper explains its data sources.</p>
+<p>The first data source is about indebtedness. This source is explained in detail:</p>
+<blockquote class="blockquote">
+<p>the UK government, the British Bankers Association and the Council for Mortgage Lenders reached an agreement in 2013 that major banks would report quarterly lending data at the postcode sector level to improve transparency about lending locations. A postcode sector has the final two letters of a full postcode removed. These data, published quarterly since 2013, include the level of outstanding personal loans. I obtain these data on the geographic distribution of unsecured personal loans from UK Finance, the trade association for the UK banking and financial services sector. It covers 9292 unique postcode sectors. I aggregate postcode sectors into four-digit postcode districts, the lowest level of geography for which data on UC beneficiaries is available,</p>
+</blockquote>
+<p>The main outcome variable is the vote choice. This paper studies UK general elections (2015, 2017, 2019):</p>
+<blockquote class="blockquote">
+<p>Parliamentary constituency–level results for the 2015, 2017, and 2019 UK general elections come from Pippa Norris’s British Parliamentary Constituency Database.</p>
+</blockquote>
+<p>How to measure welfare cuts? They are measured by looking at the differences between the Universal Credit rollout. The Department for Work and Pensions (DWP) is the source of this data:</p>
+<blockquote class="blockquote">
+<p>Data on UC rollout come from the DWP, which collects information on the number of people on UC at the postcode district and parliamentary constituency levels.</p>
+</blockquote>
+</section>
+<section id="analysis" class="level2" data-number="5.5">
+<h2 data-number="5.5" class="anchored" data-anchor-id="analysis"><span class="header-section-number">5.5</span> Analysis</h2>
+<p>The analysis starts with the section ‘Descriptive Patterns’. Here, the article provides descriptive statistics and summaries of the data. Note that numerical and visual summaries are presented.</p>
+<p>Look at the tables and figures. Pay attention to the presentation. They are numbered, and they have titles and captions. This style is important.</p>
+<p>Studying the relationship between variables of interest starts with the section “Welfare State Retrenchment and Indebtedness”. A regression model to “estimate the effect of the UC rollout on unsecured debt” is presented.</p>
+<p>In this part of the analysis, <span class="math inline">\(UC_{it}\)</span> is the explanatory variable:</p>
+<blockquote class="blockquote">
+<p><span class="math inline">\(UC_{it}\)</span> is the number of UC recipients in postcode district i and quarter-year t.</p>
+</blockquote>
+<p>The outcome variable, <span class="math inline">\(Y_{it}\)</span>, is the log of the average unsecured household debt, where <span class="math inline">\(i\)</span> refers to locality (postcode district level) and <span class="math inline">\(t\)</span> refers to time (quarter-year).</p>
+<p>What is a log transformation? It refers to a logarithm (in case you want to check more: <a href="https://en.wikipedia.org/wiki/Logarithm" class="uri">https://en.wikipedia.org/wiki/Logarithm</a>). The details are not relevant for us, but we can capture the essence. Taking the log of a number makes it smaller.</p>
+<p>Let’s see an example:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># some numbers:</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>nums  <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">10</span>, <span class="dv">100</span>, <span class="dv">1000</span>, <span class="dv">10000</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>nums</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1]    10   100  1000 10000</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># let's see their logs (base 10):</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">log</span>(nums, <span class="at">base =</span> <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1 2 3 4</code></pre>
+</div>
+</div>
+<p>Why are we doing this? Recall our discussion on income/wealth. There can be extremely wealthy individuals. When the data is spread over a wide spectrum with extremely high/low values (i.e., the data is skewed), we might want to address this. Here, taking the logarithm of a variable comes in handy.</p>
+<p>Imagine that there are three people: Alice, Bob, and Eve. Their net worths are, respectively, £10 thousand, £1 billion, and £10 billion. If we do not do any transformation, the respective wealths of Alice and Bob are closer to each other than that of Bob and Eve. The difference between Alice and Bob’s wealth is £999 million 990 thousand, while the difference between Bob and Eve’s wealth is £9 billion. So, can we say that Alice and Bob are similar and Eve is super-rich? Not really. In reality, Bob and Eve are super-rich billionaires; they are more alike. Let’s take their logarithms.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># wealth of three individuals </span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>wealth <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="dv">10</span><span class="sc">^</span><span class="dv">5</span>,  <span class="co"># 10 thousand</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="dv">10</span><span class="sc">^</span><span class="dv">12</span>, <span class="co"># 1 billion</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="dv">10</span><span class="sc">^</span><span class="dv">13</span> <span class="co"># 10 billion</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="co"># take the logarithm</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="fu">log</span>(wealth)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 11.51293 27.63102 29.93361</code></pre>
+</div>
+</div>
+<p>After taking the logarithm, the billionaires (Bob and Eve) are closer to each other with ‘27.63’ and ‘29.93’ units of wealth, respectively.</p>
+<p>Taking the logarithm of a variable can also make relationships look more linear. Let’s see an example.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="05_reading_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Let’s continue reading the article. We don’t need to understand all the details; we are trying to achieve a general understanding.</p>
+<p>A regression analysis is carried out. We are not going to get stuck in the technical details. The technique employed here is called a “difference in differences”, which we have not covered in the module (textbooks assigned as further readings have chapters on this technique). In simple terms, it compares the average change in indebtedness in localities where Universal Credit is not introduced yet with the average change in indebtedness in localities where Universal Credit is introduced.</p>
+<p>For example, imagine two localities: Norwich and York. In time <span class="math inline">\(t\)</span>, both Norwich and York do not have Universal Credit. In time <span class="math inline">\(t + 1\)</span>, Norwich goes into Universal Credit whereas it has not been introduced in York yet. We calculate the difference in indebtedness in Norwich before and after Universal Credit. This is our first difference. We also calculate how indebtedness changed in York between time <span class="math inline">\(t\)</span> and time <span class="math inline">\(t + 1\)</span>. This is our second difference. Finally, we compare these two differences. This is why it is called ‘difference in differences’. Maybe indebtedness increased in both places, but if it is increased more in Norwich than York, could it be possible that it is due to Universal Credit?</p>
+<p>I want to highlight one sentence here, on page 361:</p>
+<blockquote class="blockquote">
+<p>The identifying assumption is that no time-varying confounders affect the relationship between UC rollout and debt, such that changes in the number UC recipients are exogenous to changes in unsecured debt over time.</p>
+</blockquote>
+<p>This sentence is a little bit hard to crack, but it essentially states that there are no confounding variables (<span class="math inline">\(Z\)</span>). The reverse of exogenous is endogenous, which refers to confounders where a <span class="math inline">\(Z\)</span> variable affects both <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>. In this regard, the article argues that there is no such <span class="math inline">\(Z\)</span> (see <a href="#fig-endo" class="quarto-xref">Figure&nbsp;<span>5.3</span></a>).</p>
+<div style="text-align:center;">
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div id="fig-endo" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-endo-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div>
+<pre class="mermaid mermaid-js" data-label="fig-endo">graph TD
+    Z --&gt; X(X: UC rollout)
+    Z --&gt; Y(Y: Debt)
+</pre>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-endo-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5.3: The article claims that there is no such Z variable exists. Presence of such a confounder (Z) means endogeneity.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<p>In simple terms, the reason behind the different pace of implementing Universal Credit in different localities (<span class="math inline">\(Z\)</span>) is no way connected to debt (<span class="math inline">\(Y\)</span>), then we can consider that higher increase of indebtedness in Norwich than York is due to the introduction of Universal Credit.</p>
+<p>Obviously, we don’t do it only for our imagined example of Norwich and York, but for all localities and look at the average change.</p>
+<p>Next paragraph summarizes the results from a regression analysis:</p>
+<blockquote class="blockquote">
+<p>The results in Table 2 show that UC rollout significantly increased the amount of unsecured debt in a given postcode district. […] unsecured debt increases by about £685 for every additional person receiving UC. With average weekly gross pay in Great Britain of about £511, this is a sizeable effect.</p>
+</blockquote>
+<p>This section continues with some additional analysis to see how robust this result is to alternative modelling strategies. However, the main result stays intact: the indebtedness in a locality increases following the introduction of Universal Credit.</p>
+<section id="electoral-consequences-of-indebtedness-under-fiscal-austerity" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="electoral-consequences-of-indebtedness-under-fiscal-austerity">Electoral Consequences of Indebtedness under Fiscal Austerity</h3>
+<p>The first sentence of this section is a restatement to remind the reader what the argument is. Such repetitions and restatements are necessary for organizing the text:</p>
+<blockquote class="blockquote">
+<p>Fiscal austerity privatizes social obligations and recommodifies individuals through debt. As a result, I argue that borrowers shift their electoral support from incumbents to the opposition because they feel politically neglected, economically vulnerable, and lacking of social support.</p>
+</blockquote>
+<p>The following sentence tells us what to expect next:</p>
+<blockquote class="blockquote">
+<p>This section examines how indebtedness affects political behavior with two complementary empirical strategies before presenting evidence on the underlying mechanisms in the next section.</p>
+</blockquote>
+<p>Recall that the analysis has three components:</p>
+<ol type="1">
+<li>Universal Credit <span class="math inline">\(\rightarrow\)</span> Unsecured Debt</li>
+<li>Unsecured Debt <span class="math inline">\(\rightarrow\)</span> Political Behaviour
+<ol type="a">
+<li>Constituency-level (data: election results)</li>
+<li>Individual-level (data: the BES survey)</li>
+</ol></li>
+<li>Unsecured Debt <span class="math inline">\(\rightarrow\)</span> Emotions (this is the mechanism through which unsecured debt influence political behaviour)</li>
+</ol>
+<p>The article already presented the first analysis, and is turning to the second one, which has two sub-components.</p>
+<section id="a-constituency-level-results" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="a-constituency-level-results">(a) Constituency-Level Results</h4>
+<p>Again, we are not going to get stuck in technical details and march toward the main result. Starting with the analysis 2.a, the article explains that the analysis is at the constituency-level:</p>
+<blockquote class="blockquote">
+<p>I study the effect of austerity-induced indebtedness on turnout and party vote shares in the 2015, 2017 and 2019 general elections</p>
+</blockquote>
+<p>A regression analysis is carried out. Again, we are not going to get stuck in the technical details. Let’s try to clarify the outcome and explanatory variables (<span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>). The statement quoted above gives this information. The independent variable is the austerity-induced indebtedness. Note that this is not just indebtedness, <em>austerity-induced indebtedness.</em> This is estimated through the first study. When the article discusses two-stage regression, the first stage refers to estimating <em>austerity-induced indebtedness.</em></p>
+<p>For the outcome, the study analyze both the turnout and party vote share. In this regard, this stage has multiple dependent variables: the article will analyze the turnout and the party vote share of major parties (i.e., Tories, LibDem, Labour, UKIP).</p>
+<p>In addition to outcome and independent variables, the article also discusses control variables. These are possible ‘confounders’ that may influence the variables of interest. Most importantly, we want to keep our units as similar as possible for meaningful comparison. See the following passage (on page 363):</p>
+<blockquote class="blockquote">
+<p><span class="math inline">\(X_{it}\)</span> is a matrix of constituency-level covariates, including unemployment rates, mean annual gross pay for full-time workers, the share of individuals with a bachelor’s degree or higher, and the share of people 60 years and older. I further control for median house prices, which have been found to be associated with lower turnout (McCartney 2021) and voting for populist parties (Adler and Ansell 2020). House prices also serve as a proxy for local economic conditions, because a strong local economy can increase incumbents’ chances of re-election (Larsen et al.&nbsp;2019). Homeowners are more likely to hold conservative views and less likely to support redistribution when house prices are rising (Ansell 2014).</p>
+</blockquote>
+<p>The paragraph starting with “Figure 3 show the results” (on page 363) discusses the results. Look at Figure 3 and read this paragraph carefully. The last sentence of this paragraph contextualize the results:</p>
+<blockquote class="blockquote">
+<p>A 10% increase in debt strengthens turnout by about 0.52 percentage points and reduces the vote shares for the Tories and Liberal Democrats by 0.69 and 0.96 percentage points, respectively. By contrast, the opposition parties gain electorally as austerity-induced debt rises. For a 10% increase in debt, the Labour party and UKIP gain 2.45 and 0.68 percentage points, respectively.</p>
+</blockquote>
+<p>To summarize the constituency level findings, the turnout is higher in constituencies with higher levels of unsecured debt (induced by Universal Credit) than in constituencies with lower levels of unsecured debt. The respective vote shares of Tories and Liberal Democrats are lower in constituencies with higher levels of unsecured debt. Conversely, the vote shares of the opposition Labour and UKIP are higher in constituencies with higher levels of unsecured debt.</p>
+</section>
+<section id="b-micro-level-results" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="b-micro-level-results">(b) Micro-Level Results</h4>
+<p>The article continues with what we have termed ‘study 2.b’, which refers to individual-level analysis. This section estimates an individual’s probability of voting (for a particular party). In simple terms, we are interested in the differences between those who have unsecured debt and those who don’t in terms of their voting behaviour. Do debtors behave differently from non-debtors when it comes to voting?</p>
+<p>As we discussed in the lectures, we want to make these groups (debtors and non-debtors) as similar as possible except for their indebtedness, and compare their political behaviour. However, these two groups can be quite different in other aspects. The author acknowledges this problem and explains the steps they have taken to address it, namely considering other observable factors in the analysis:</p>
+<blockquote class="blockquote">
+<p><span class="math inline">\(X_i\)</span> is a matrix of socioeconomic covariates that could confound the relationship between indebtedness and political behavior. I include age, education, income, number of children in the household, and dummy variables for gender, marital status, unemployed, student, retired, homeowner status, and union membership. I further control for respondents’ class status, which traditionally occupied a central position in British voting patterns.</p>
+</blockquote>
+<p>Main results are discussed on page 364 and shown in Figure 4:</p>
+<blockquote class="blockquote">
+<p>The left panel of Figure 4 shows that respondents who borrow money for essentials are 1.6 times more likely to turn out and vote, compared to those who do not borrow for essentials. They are considerably less likely to vote for the incumbent Tories (a 50% probability) and 1.5 times more likely to support Labour and 1.8 times more likely to support UKIP.</p>
+</blockquote>
+<p>One more thing to highlight here: the article makes a distinction between ‘borrowing for essentials’ and more general borrowing (i.e., ‘unsecured debt’). ‘Borrowing for essentials’ is a subset of ‘unsecured debt’, but it is more relevant for the purposes of this study because those who had to borrow for essentials such as food are more likely to be hit by welfare cuts than those who borrowed to buy, for example, luxury consumption goods. The author argues that although the results are not that strong for general borrowing, there is a strong relationship between ‘borrowing for essentials’ and voting behaviour, which is exactly where the theoretical framework expects to find a relationship.</p>
+<p>The article then turns to some other questions in the BES survey related to the welfare state, such as respondents’ views on cuts to local services and public spending.</p>
+</section>
+</section>
+<section id="investigating-the-mechanisms" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="investigating-the-mechanisms">Investigating the Mechanisms</h3>
+<p>In the penultimate section, titled <em>Investigating the Mechanisms</em>, the article presents the third component of the empirical analysis, which tackles the relationship between unsecured debt and emotional response. Recall that emotional response is a crucial mid-step in the causal chain (see <a href="#fig-theory1" class="quarto-xref">Figure&nbsp;<span>5.2</span></a>).</p>
+<p>Apply the approach we have used so far to read the text. Do not get stuck in technical details and try to cut to the core of the argument and results. Focus on Figures 5, 6, and 7. Try to understand them as they visually summarize the results.</p>
+</section>
+</section>
+<section id="discussion-and-conclusion" class="level2" data-number="5.6">
+<h2 data-number="5.6" class="anchored" data-anchor-id="discussion-and-conclusion"><span class="header-section-number">5.6</span> Discussion and Conclusion</h2>
+<p>This section begins with a concise summary of the article, highlighting the main arguments and findings. It is short and accessible, similar to an ‘executive summary’: readers who don’t go through the entire text can still grasp the key points by reading this first paragraph. It is where the author presents the most important points to take away. In this regard, there are similarities between the introduction and conclusion sections, but the conclusion is usually the shortest section of the text (besides the abstract). The conclusion section needs to be concise. It should be dense but accessible.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Do not introduce a new argument in conclusion
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The conclusion section is there to summarize and highlight the most important points raised in the article. You should not use this section to go into deep, substantive discussions by bringing in new evidence and arguments. If such evidence and arguments are essential, they should come earlier in the text. Nothing new should be introduced in the conclusion.</p>
+</div>
+</div>
+<p>The second paragraph is a concise answer to the question “Why should we care about these findings?”. This is an effective strategy to remind of the reader the importance of the topic at hand. Note that this is not the first time the article emphasizes the important of the topic: this has been done in the introduction as well.</p>
+<p>The final two paragraphs are about ‘further research’. This is a typical approach in academic writing, but not that common in other sets of professional writing. Discussing the policy implications of the research is another common feature of a conclusion in a scholarly piece.</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./04_pipe.html" class="pagination-link" aria-label="Functions, Libraries and Operators">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Functions, Libraries and Operators</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./06_crosstab.html" class="pagination-link" aria-label="Cross Tabulation">
+        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Cross Tabulation</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

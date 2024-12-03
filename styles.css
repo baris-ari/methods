@@ -1,0 +1,7 @@
+/* css styles */
+
+/* Custom CSS for black table captions */
+.table-container figcaption {
+    color: black;
+    font-weight: bold;
+}
